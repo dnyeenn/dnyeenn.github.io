@@ -142,91 +142,26 @@ span.highlight {
 }
 
 
-
-
-.travel-scroll {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(2, 360px);
-  gap: 24px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  padding: 20px 0 30px;
-
-  scroll-snap-type: x mandatory;
-
-  /* ===== FIX QUAN TRỌNG ===== */
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* card */
-.travel-card {
-  position: relative;
-  min-width: 260px;
-  height: 360px;
-
-  border-radius: 20px;
-  overflow: hidden;
-
-  scroll-snap-align: center;
-
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-
-  /* chống bung grid */
-  box-sizing: border-box;
-}
-
-.travel-card:hover {
-  transform: translateY(-6px);
-}
-
-/* image */
-.travel-card img {
-  display: block;        /* QUAN TRỌNG */
+/* ===== Travel Section ===== */
+.travel-section {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-
-  filter: brightness(0.85);
-  transition: filter 0.3s ease;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-.travel-card:hover img {
-  filter: brightness(1);
-}
-
-/* caption */
-.travel-card span {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  padding: 8px 18px;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-
-  border-radius: 30px;
+.travel-desc {
+  max-width: 720px;
+  margin: 14px auto 36px;
   font-size: 15px;
-  letter-spacing: 0.5px;
+  line-height: 1.7;
+  color: #555;
 }
 
-.travel-scroll {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-rows: 360px;   /* ✅ cực kỳ quan trọng */
-  grid-template-rows: repeat(2, 360px);
+/
 
-  gap: 24px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  align-items: start;      /* ✅ chặn stretch */
-  padding: 20px 0 30px;
-}
+
 
 
 
