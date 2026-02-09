@@ -144,20 +144,77 @@ span.highlight {
 
 
 
+.travel-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 20px 0 30px;
+
+  scroll-snap-type: x mandatory;
+
+  /* ===== FIX QUAN TRỌNG ===== */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* card */
 .travel-card {
   position: relative;
-  min-width: 52px;
-  height: 72px;
-  border-radius: 8px;
+  min-width: 260px;
+  height: 360px;
+
+  border-radius: 20px;
   overflow: hidden;
+
   scroll-snap-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+
+  /* chống bung grid */
+  box-sizing: border-box;
 }
+
+.travel-card:hover {
+  transform: translateY(-6px);
+}
+
+/* image */
+.travel-card img {
+  display: block;        /* QUAN TRỌNG */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+}
+
+.travel-card:hover img {
+  filter: brightness(1);
+}
+
+/* caption */
 .travel-card span {
-  font-size: 10px;
-  padding: 4px 8px;
-  bottom: 6px;
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 8px 18px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+
+  border-radius: 30px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
 }
+
 
 
 
