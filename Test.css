@@ -147,7 +147,7 @@ span.highlight {
 
 .travel-scroll {
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   grid-template-rows: repeat(2, 1fr);
   gap: 24px;
   overflow-x: auto;
