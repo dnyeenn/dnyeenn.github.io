@@ -88,22 +88,6 @@ a {
 
 
 
-body {
-  background: linear-gradient(
-    120deg,
-    #f3e8ff,
-    #e9d5ff,
-    #ddd6fe,
-    #e0e7ff,
-    #f5d0fe
-  );
-
-  background-size: 400% 400%;
-  animation: hologramBG 18s ease infinite;
-}
-
-
-
 
 
 
@@ -257,19 +241,43 @@ span.highlight {
     background-position: 0% 50%;
   }
 }
-body::before {
-  content: "";
-  position: fixed;
+
+
+body{
+  margin:0;
+  background:#050010;
+  overflow-x:hidden;
+}
+
+/* lớp galaxy */
+.galaxy-bg{
+  position:fixed;
   top:0;
   left:0;
   width:100%;
   height:100%;
-  background: linear-gradient(
-    45deg,
-    rgba(255,255,255,0.25),
-    rgba(255,255,255,0),
-    rgba(255,255,255,0.25)
-  );
-  mix-blend-mode: overlay;
-  pointer-events:none;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.galaxy-bg span{
+  position:absolute;
+  width:60vw;
+  height:60vw;
+  border-radius:50%;
+  filter:blur(140px);
+  opacity:0.6;
+  animation:galaxyMove 25s infinite alternate ease-in-out;
+}
+
+/* màu galaxy */
+.g1{background:#7b2ff7; top:10%; left:10%;}
+.g2{background:#ff2fd1; top:60%; left:70%;}
+.g3{background:#00cfff; top:70%; left:20%;}
+.g4{background:#ff6ec4; top:20%; left:70%;}
+
+@keyframes galaxyMove{
+  0%{transform:translate(0,0) scale(1);}
+  50%{transform:translate(120px,-80px) scale(1.2);}
+  100%{transform:translate(-80px,100px) scale(1);}
 }
